@@ -412,6 +412,11 @@ const getCandyMachineState = async () => {
     return <p>{`Drop Date: ${candyMachine.state.goLiveDataTimeString}`}</p>
 
 
+  };
+
+  const notMintYet = () => {
+
+    alert("You can't MINT YET DUMMY LOL meta meta drop in 5 days..")
   }
 
 
@@ -423,7 +428,7 @@ const getCandyMachineState = async () => {
             <p  className = "mint-Description">{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
             {candyMachine.state.itemsRedeemed === candyMachine.state.itemsAvailable ? <p className = "sub-text">SOLD OUT CRITTERS!</p> : (
 
-                <button className="cta-button mint-button" onClick={mintToken}>
+                <button className="cta-button mint-button" onClick={notMintYet}>
                 Mint NFT
                 </button>
             )}
